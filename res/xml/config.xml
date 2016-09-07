@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--widget id="es.uc3m.secure_messaging" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" -->
+<widget id="es.uc3m.secure_messaging" version="0.0.1">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Sms">
+        <param name="android-package" value="es.uc3m.secure_messaging.cordova.plugins.sms.Sms" />
+    </feature>
+    <feature name="SmsInboxPlugin">
+        <param name="android-package" value="es.uc3m.secure_messaging.cordova.plugins.sms.SmsInboxPlugin" />
+    </feature>
+    <feature name="SQLitePlugin">
+        <param name="android-package" value="es.uc3m.secure_messaging.cordova.plugins.sqlite.SQLitePlugin" />
+    </feature>
+    <allow-intent href="market:*" />
+    <name>SecureMessging</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="conversations.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="AndroidExtraFilesystems" value="files,files-external,documents,sdcard,cache,cache-external,root" />
+</widget>

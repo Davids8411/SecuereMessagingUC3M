@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Setup</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+</head>
+<body>
+	<div class="app">
+		<div data-role="page" data-theme="a" id="setup-page">
+   
+			<div data-role="header" data-position="fixed">
+				<h1>Setup</h1>
+				<a href="messages.html" onclick="app.loadView()" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false"></a>
+			</div><!-- /header -->
+
+			<div role="main" class="ui-content">
+				<form id="setup-form-length-RSA">
+					<fieldset data-role="controlgroup" data-type="horizontal">
+						<legend>RSA Key length:</legend>
+						<input type="radio" name="radio-choice" id="radio-choice-512" value="512" checked="checked">
+						<label for="radio-choice-512">512</label>
+						<input type="radio" name="radio-choice" id="radio-choice-1024" value="1024">
+						<label for="radio-choice-1024">1024</label>
+						<input type="radio" name="radio-choice" id="radio-choice-2048" value="2048">
+						<label for="radio-choice-2048">2048</label>
+					</fieldset>
+				</form>
+				<br />
+				<p>If you click this button, your RSA key pair will be regenerated using the value set previously.</p>
+				<input type="button" onclick="app.regenerateRSA()" value="Regenerate RSA" data-icon="refresh" data-iconpos="left" data-inline="true" />
+				<br />
+				<p>If you click this button, all your contact will be deleted.</p>
+				<input type="button" onclick="app.deleteAllContact()" value="Delete All Contacts" data-icon="delete" data-iconpos="left" data-inline="true" />
+				<br />
+				<p>If you click this button, all your messages will be deleted.</p>
+				<input type="button" onclick="app.deleteAllMessages()" value="Delete All Messages" data-icon="delete" data-iconpos="left" data-inline="true" />
+				<br /><br />
+				<p>Show objects stored:</p>
+				<input type="button" onclick="app.showObjectRSA()" value="Show My Data Objects" data-icon="eye" data-iconpos="left" data-inline="true" />
+				<br />
+				<input type="button" onclick="app.showObjectsContact()" value="Show Contacts Objects" data-icon="eye" data-iconpos="left" data-inline="true" />
+				<br />
+				<input type="button" onclick="app.showObjectsMessages()" value="Show Messages Objects" data-icon="eye" data-iconpos="left" data-inline="true" />
+				<br />
+			</div><!-- /content -->
+
+			<div data-role="footer" data-position="fixed">
+				<h2>UC3M</h2>
+			</div>
+
+		</div><!-- /page -->
+	</div>	<!-- /app -->
+</body>
+</html>

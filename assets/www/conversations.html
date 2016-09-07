@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Messages</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+</head>
+<body>
+
+<div data-role="page" data-theme="a" id="messages-page">
+
+ <div data-role="panel" id="navpanel" data-theme="b" data-display="overlay" data-position="right">
+        <div data-role="controlgroup" data-corners="false"> 
+			<a href="newMessage.html" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-comment">New Message</a>
+			<a href="contacts.html" data-role="button" onclick="app.loadContacts()" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-user">Contacts</a>
+			<a href="myKeys.html" data-role="button" onclick="app.loadRSAKeys()" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-lock">My Keys</a>
+			<a href="setup.html" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-gear">Setup</a>
+		</div>
+ </div> 
+   
+	<div data-role="header" data-position="fixed">
+		<h1>Conversations</h1>
+		<a href="#navpanel" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear">Options</a>
+	</div><!-- /header -->
+
+	<div role="main">
+
+        <ul id="message-list" data-role="listview" data-inset="true">
+			<!-- Example of the HTML structure used -->
+
+        	<!--li><a href="messages.html">
+            	<img src="img/icons-png/contact.png" class="ui-li-thumb">
+            	<h2>+34666555222</h2>
+                <p>Date last Received: thu, August 15 2016</p>
+                <p class="ui-li-aside">Messages: 1</p>
+            </a></li>
+        	<li><a href="messages.html">
+            	<img src="img/icons-png/contact.png" class="ui-li-thumb">
+            	<h2>+34666555333</h2>
+                <p>Date last Sent: thu, August 15 2016</p>
+                <p class="ui-li-aside">Messages: 1</p>
+            </a></li>
+        	<li><a href="messages.html">
+            	<img src="img/icons-png/contact.png" class="ui-li-thumb">
+            	<h2>+33666555444</h2>
+                <p>Date last Sent: thu, August 15 2016</p>
+                <p class="ui-li-aside">Messages: 2</p>
+            </a></li>
+        	<li><a href="messages.html">
+            	<img src="img/icons-png/contact.png" class="ui-li-thumb">
+            	<h2>+34666555555</h2>
+                <p>Date last Received: thu, August 15 2016</p>
+                <p class="ui-li-aside">Messages: 3</p>
+            </a></li -->
+        </ul>
+
+    </div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed">
+		<h2>UC3M</h2>
+	</div><!-- /header -->
+
+</div><!-- /page -->
+<div id="deviceready" class="blink">
+	<p class="event listening">Loading...</p>
+	<p class="event received"></p>
+</div>
+	<script src="js/external-libraries/jquery-1.12.3.js"></script>
+	<script src="js/external-libraries/jquery.mobile-1.4.5.js"></script>
+	<script src="js/external-libraries/cordova.js"></script>
+	<script src="js/index.js"></script>
+
+	<script src="js/access-to-messages.js"></script>
+	<script src="js/access-to-myData.js"></script>
+	<script src="js/access-to-contacts.js"></script>
+	<script src="js/cipher.js"></script>
+
+	<script src="js/external-libraries/plugins-sms/SmsInboxPlugin.js"></script>
+	<script src="js/external-libraries/cryptography/forge.bundle.js"></script>
+	<script src="js/external-libraries/cryptography/nacl.js"></script>
+	<script src="js/external-libraries/utils/BigInteger.min.js"></script>
+</body>
+</html>

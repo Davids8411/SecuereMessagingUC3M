@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Messages</title>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+</head>
+<body>
+<div data-role="page" data-theme="a" class="myContacts-page" id="myContacts-page">
+
+ <!--div data-role="panel" id="navpanel" data-theme="b" data-display="overlay" data-position="right">
+        <div data-role="controlgroup" data-corners="false">
+			<a href="#" data-role="button">New Message</a>
+			<a href="#" data-role="button">Contacts</a>
+			<a href="#" data-role="button">My Keys</a>
+		</div>
+ </div -->
+   
+	<div data-role="header" data-position="fixed">
+		<h1>Contacts</h1>
+		<a href="messages.html" onclick="app.loadView()" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false"></a>
+		<a href="addContact.html" class="ui-btn-right ui-btn ui-btn-inline  ui-corner-all ui-btn-icon-right ui-icon-plus">Add Contact</a>
+	</div><!-- /header -->
+
+	<div id="contacts" role="main">
+		<!-- Example of the HTML structure used -->
+
+		<!--div data-role="collapsible" data-collapsed-icon="user" >
+			<h3>+34666555444</h3>
+			<h4>RSA Public Key: Permanent
+				<div data-role="collapsible-set">
+					<div data-role="collapsible">
+						<h5>n:</h5>
+						<textarea cols="40" rows="8" name="textarea">1214553334343475654765676778878787675665432321212334455466745</textarea>
+					</div>
+					<div data-role="collapsible">
+						<h5>e:</h5>
+						<textarea cols="40" rows="8" name="textarea">65537</textarea>
+					</div>
+				</div>
+			</h4>
+			<br />
+			<h4>Curve 25519 Keys: Ephemeral
+				<div data-role="collapsible-set">
+					<div data-role="collapsible">
+						<h5>My Secret:</h5>
+						<textarea data-disabled="true" cols="40" rows="8" name="textarea">UHJvaW4gZG9sb3IgbmlzbCwgc2FnaXR0aXMgdml0YWUgZHV</textarea>
+					</div>
+					<div data-role="collapsible">
+						<h5>My Public Key:</h5>
+						<textarea data-disabled="true" cols="40" rows="8" name="textarea">UHJvaW4gZG9sb3IgbmlzbCwgc2FnaXR0aXMgdml0YWUgZHV</textarea>
+					</div>
+					<div data-role="collapsible">
+						<h5>Contact Public Key:</h5>
+						<textarea data-disabled="true" cols="40" rows="8" name="textarea">UHJvaW4gZG9sb3IgbmlzbCwgc2FnaXR0aXMgdml0YWUgZHV</textarea>
+					</div>
+				</div>
+			</h4>
+			<div style="text-align:center;">
+				<input type="button" onclick="app.saveChangesContact(+34666555444)" value="Save Changes" data-icon="edit" data-iconpos="right" data-inline="true" />
+				<input type="button" onclick="app.deleteContact(+34666555444)" value="Delete Changes" data-icon="delete" data-iconpos="right" data-inline="true" />
+			</div>
+		</div -->
+
+    </div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed">
+		<h2>UC3M</h2>
+		<!-- a href="./" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a -->
+	</div><!-- /header -->
+
+</div><!-- /page -->
+
+</body>
+</html>
